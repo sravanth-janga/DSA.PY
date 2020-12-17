@@ -1,5 +1,5 @@
-from .linkedlist import LinkedList
-from .Node import Node
+from linkedlist import LinkedList
+from Node import Node
 class Stack(LinkedList):
 
     def __init__(self):
@@ -11,13 +11,15 @@ class Stack(LinkedList):
         cur.next = self.head
         self.head = cur
         self.length +=1
-    def pop(self):
+    def pop(self,valueonly=True):
         if not self.length:
             self._reporterr()
-        cur = self.head.val
+        cur = self.head
         self.head = self.head.next
         self.length -=1
         # returns the value of top most node and pops it from the stack
+        if valueonly:
+            return cur.val 
         return cur 
     def peek(self):
         return self.head.val 

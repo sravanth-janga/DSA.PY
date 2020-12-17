@@ -1,5 +1,9 @@
-from .Node import Node
+import sys,os
+sys.path.append(os.path.join('.'))
+sys.path.append(os.path.join('..'))
+from Node import Node
 from Errors.exceptions import Empty
+
 class LinkedList():
     def __init__(self,msg =  'Linked List is Empty'):
         self.head = None
