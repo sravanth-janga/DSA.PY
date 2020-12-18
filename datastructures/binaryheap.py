@@ -1,7 +1,11 @@
+import sys,os
+sys.path.append(os.path.join('.'))
+sys.path.append(os.path.join('..'))
 class MaxHeap:
     def __init__(self):
         self.list = [None]
         self.heap_size = 0
+        self.nxt = 0
         self.__str__()
 
     # my dets!
@@ -24,9 +28,9 @@ class MaxHeap:
         L = self.left(index)
         R = self.right(index)
         Max = index
-        if L<=self.heap_size and self.list[Max]< self.list[L]:
+        if L<=self.heap_size and self.list[Max]<=self.list[L]:
             Max = L 
-        if R<=self.heap_size and self.list[Max]<self.list[R]:
+        if R<=self.heap_size and self.list[Max]<=self.list[R]:
             Max = R  
         if Max != index:
             self.swap(Max, index)
@@ -35,6 +39,8 @@ class MaxHeap:
     def swap(self,i,j):
         self.list[i],self.list[j] = self.list[j],self.list[i]
 
+
+    # heap sort alogrith
     def sort(self):
         hs = self.heap_size
         self.Build()
@@ -51,7 +57,10 @@ class MaxHeap:
 
     # appends nodes so that it forms a complete binary tree-
     def add(self,val):
-        self.list.append(val)
+        if self.nxt == self.heap_size+1:
+            self.list[self.nxt] = val
+        else:
+            self.list.append(val)
         self.heap_size +=1
     # returns parent,leftchild, rightchild of node at index
     def parent(self,index):
