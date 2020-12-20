@@ -1,16 +1,21 @@
 import sys,os
-sys.path.append(os.path.join('.'))
 sys.path.append(os.path.join('..'))
-from Node import Node
+sys.path.append(os.path.join('.'))
+from datastructures.Node import Node
 from Errors.exceptions import Empty
 
+######################### LinkedList ###############################################
 class LinkedList():
-    def __init__(self,msg =  'Linked List is Empty'):
+    """ 
+        Singly linkedlist
+    """
+    def __init__(self,msg =  'Linked List is Empty',verbose=False):
         self.head = None
         self.tail = None
         self.msg = msg
         self.length = 0
-        self.__str__()
+        if verbose:
+            self.__str__()
     # my dets
     def __str__(self):
         print( """       

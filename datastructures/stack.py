@@ -1,10 +1,12 @@
 import sys,os
 sys.path.append(os.path.join('.'))
 sys.path.append(os.path.join('..'))
-from linkedlist import LinkedList
-from Node import Node
+from datastructures.linkedlist import LinkedList
+from datastructures.Node import Node
 class Stack(LinkedList):
-
+    """ 
+        Typical stack datastructure
+    """
     def __init__(self):
         super().__init__('Empty Stack!')      
 
