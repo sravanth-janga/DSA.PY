@@ -112,10 +112,10 @@ class Algo(Graph):
         if self.__topo!=None:
             self.__topo.append(node)
 
-# BFS driver code
+""" # BFS driver code
 E = [[1,2],[1,3],[1,4],[4,2],[4,5],[2,3],[5,3]]
 g = Algo(5,E,repr='list')
 print(g.G)
 top = g.Dfs()
 while(top):
-    print(top.pop())
+    print(top.pop()) """
