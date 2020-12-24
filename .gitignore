@@ -1,4 +1,5 @@
 tests/**
+Images/**
 heap.py
 o.py
 q2.py
