@@ -1,3 +1,6 @@
-# DSA.PY
-It's a python package similar to STL in C++.
-Refer to docs and tutorials on dsa [here](https://dsa-py.gitbook.io/graphs/)
+# Graph
+
+{% hint style="info" %}
+Python 3 implementation of every algorithm in this series can be found on[**`github`**](https://github.com/sravanth-janga/DSA.PY)**\`\`**
+{% endhint %}
+
